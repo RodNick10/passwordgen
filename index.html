@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PassWordGenerator</title>
+    <script src="script.js"></script>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/4.3/examples/album/"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <header id="pageHeader"></header>
+    <article id="mainArticle">
+      <h1>Password Generator</h1>
+      <hr />
+      <div class="content">
+        <h4>Generate a Password</h4>
+        <p>
+          Adjust the slider to select the size of your password - from 8 to 182
+          digits
+        </p>
+        <hr />
+        <br />
+        <textarea type="text" id="display">Your Score Password</textarea>
+        <br />
+        <input
+          type="range"
+          min="8"
+          max="182"
+          name="slider"
+          id="slider"
+          list="tickmarks"
+        />
+        <datalist id="tickmarks">
+          <option value="8" label="8"></option>
+          <option value="91" label="91"></option>
+          <option value="182" label="182"></option>
+        </datalist>
+        <br />
+        <br />
+        <button
+          type="button"
+          class="btn btn-secondary btn-lg"
+          onclick="generate()"
+        >
+          Generate Password
+        </button>
+        <button
+          type="button"
+          class="btn btn-secondary btn-lg"
+          background-color="gray"
+          onclick="copytoclip()"
+        >
+          Copy to Clipboard
+        </button>
+        <div id="length"></div>
+      </div>
+    </article>
+    <nav id="mainNav"></nav>
+    <div id="siteAds"></div>
+    <footer id="pageFooter">
+      RN password generator - Copyrights - v 1.2.3. 2019
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav article ads"
+    "nav footer footer";
+  grid-template-rows: 80px 1fr 70px;
+  grid-template-columns: 20% 1fr 15%;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 0;
+}
+header,
+footer,
+article,
+nav,
+div {
+  padding: 1.2em;
+  background-color: white;
+}
+#pageHeader {
+  grid-area: header;
+}
+#pageFooter {
+  grid-area: footer;
+}
+#mainArticle {
+  grid-area: article;
+  background-color: lightgrey;
+}
+.content {
+  height: 400px;
+}
+#mainNav {
+  grid-area: nav;
+}
+#siteAds {
+  grid-area: ads;
+}
+#display {
+  margin: 11px;
+  width: 800px;
+  text-align: center;
+}
+#slider {
+  margin-left: 330px;
+  margin-top: 30px;
+}
+.btn-group-lg > .btn,
+.btn-lg {
+  background-color: brown;
+  margin-left: 127px;
+}
+#pageFooter {
+  color: lightgray;
+}
+
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+  body {
+    grid-template-areas:
+      "header"
+      "article"
+      "ads"
+      "nav"
+      "footer";
+    grid-template-rows: 80px 1fr 70px 1fr 70px;
+    grid-template-columns: 1fr;
+  }
+}
